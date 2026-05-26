@@ -95,8 +95,8 @@ return;
 
 try{
 
-const res=await axios.get(
-`http://localhost:5000/api/products/search/${search}`
+const res = await axios.get(
+`https://prodigy-fs-03-whp0.onrender.com/api/products/search/${search}`
 );
 
 setMatchedShopIds(
@@ -170,8 +170,8 @@ const fetchShops=async()=>{
 
 try{
 
-const res=await axios.get(
-"http://localhost:5000/api/shops"
+const res = await axios.get(
+"https://prodigy-fs-03-whp0.onrender.com/api/shops"
 );
 
 setShops(res.data);
@@ -234,7 +234,7 @@ const deleteShop=async(id)=>{
 try{
 
 await axios.delete(
-`http://localhost:5000/api/shops/${id}`
+`https://prodigy-fs-03-whp0.onrender.com/api/shops/${id}`
 );
 
 fetchShops();

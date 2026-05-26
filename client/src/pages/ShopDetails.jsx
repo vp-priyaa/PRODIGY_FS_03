@@ -43,21 +43,21 @@ const fetchData=async()=>{
 
 try{
 
-const shopRes=
+const shopRes =
 await axios.get(
-`http://localhost:5000/api/shops/${id}`
+`https://prodigy-fs-03-whp0.onrender.com/api/shops/${id}`
 );
+
 
 setShop(
 shopRes.data
 );
 
 
-const productRes=
+const productRes =
 await axios.get(
-`http://localhost:5000/api/products/shop/${id}`
+`https://prodigy-fs-03-whp0.onrender.com/api/products/shop/${id}`
 );
-
 setProducts(
 productRes.data
 );
@@ -82,7 +82,7 @@ const submitReview=async()=>{
 try{
 
 await axios.post(
-`http://localhost:5000/api/shops/${id}/review`,
+`https://prodigy-fs-03-whp0.onrender.com/api/shops/${id}/review`,
 {
 user,
 rating,
